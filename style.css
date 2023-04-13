@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+:root {
+  --primary-light-cyan: hsl(193, 38%, 86%);
+  --primary-neon-green: hsl(150, 100%, 66%);
+  --secondary-grayish-blue: hsl(217, 19%, 38%);
+  --secondary-dark-brayish-blue: hsl(217, 19%, 24%);
+  --secondary-dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-dark-blue);
+  height: 100vh;
+}
+body .container {
+  position: relative;
+  padding: 40px 20px;
+  background-color: var(--secondary-dark-brayish-blue);
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  max-width: 37.5em;
+  border-radius: 10px;
+  /* align-items: center; */
+  text-align: center;
+  gap: 1.5em;
+}
+body .container .advice-info {
+  color: var(--primary-neon-green);
+  letter-spacing: 6px;
+}
+body .container .advice-container {
+  color: var(--primary-light-cyan);
+  font-weight: 800;
+  font-size: 28px;
+  padding: 0px 40px;
+}
+body .container .random {
+  position: absolute;
+  cursor: pointer;
+  background-color: var(--primary-neon-green);
+  bottom: 0;
+  left: 50%;
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-out;
+}
+body .container .random img {
+  height: 20px;
+  width: 20px;
+}
+body .container .random:hover {
+  box-shadow: 1px -1px 20px var(--primary-neon-green);
+}
+body .container .patern {
+  margin-bottom: 1.5em;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 30px 0px;
+    width: 80vw;
+  }
+  .advice {
+    font-size: 16px;
+    padding: 0px 0px;
+  }
+  .advice-info {
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+}
